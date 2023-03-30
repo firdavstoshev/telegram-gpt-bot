@@ -1,8 +1,9 @@
 import telebot
 import openai
+import config
 
-bot = telebot.TeleBot('6153376308:AAGLdSMLUVpBT80HNQY79eIhS7BXYN55VpM')
-openai.api_key = "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"
+bot = telebot.TeleBot(config.gpt)
+openai.api_key = config.bot
 
 
 @bot.message_handler(commands=["start"])
