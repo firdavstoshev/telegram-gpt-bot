@@ -2,8 +2,8 @@ import telebot
 import openai
 import config
 
-bot = telebot.TeleBot(config.gpt)
-openai.api_key = config.bot
+bot = telebot.TeleBot(config.bot)
+openai.api_key = config.gpt
 
 
 @bot.message_handler(commands=["start"])
